@@ -14,4 +14,12 @@ class Recipe:
         self.description=description
         self.num_of_servings=num_of_serving
         self.is_published=False
-        
+
+@property
+def data(self):
+    return{
+        'id':self.id,
+        'name':self.name,
+        'description':self.description,
+        'num_of_servings':self.num_of_servings
+    }

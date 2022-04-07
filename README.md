@@ -18,3 +18,15 @@ Install dependencies
 ```
 pip install -r requirements.txt
 ```
+
+RecipeListResource inherit after Resource, when we have **self** in the () it does not ihnerit from anything
+```python
+class RecipeListResource(Resource):
+    def get(self):
+        data=[]
+        for recipe in recipe_list:
+            if recipe.is_published is True:
+                data.append(recipe.data)
+        return {'data':data}, HTTPStatus.OK
+
+```
