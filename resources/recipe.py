@@ -12,4 +12,10 @@ class RecipeListResource(Resource):
                 data.append(recipe.data)
         return {'data':data}, HTTPStatus.OK
 
+    def post(self):
+        data=request.get_json()
+        recipe=Recipe(name=data['name'], description=data['description'], num_of_servings=data['num_of_servings'])
 
+        recipe_list.append(recipe)
+
+        return recipe.data, HTTPStatus.CREATED
