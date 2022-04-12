@@ -30,3 +30,8 @@ class RecipeListResource(Resource):
         return {'data':data}, HTTPStatus.OK
 
 ```
+
+## Webrequests
+```powershell
+Invoke-WebRequest -Uri http://127.0.0.1:5000/recipes
+```
