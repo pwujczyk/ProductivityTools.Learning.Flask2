@@ -34,4 +34,6 @@ class RecipeListResource(Resource):
 ## Webrequests
 ```powershell
 Invoke-WebRequest -Uri http://127.0.0.1:5000/recipes
+
+Invoke-WebRequest -Uri http://127.0.0.1:5000/recipes -Method Post -Body (@{name='pawel'; description='dest'; num_of_servings=0} |ConvertTo-Json) -ContentType application/json
 ```
