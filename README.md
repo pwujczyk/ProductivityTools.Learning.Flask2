@@ -37,3 +37,12 @@ Invoke-WebRequest -Uri http://127.0.0.1:5000/recipes
 
 Invoke-WebRequest -Uri http://127.0.0.1:5000/recipes -Method Post -Body (@{name='pawel'; description='dest'; num_of_servings=0} |ConvertTo-Json) -ContentType application/json
 ```
+
+## Database access
+Packages:
+- Flask-SQLAlchemy: This is a very popular ORM package that allows us to access 
+objects rather than database tables for data. With ORM, we do not need to rely on 
+SQL anymore.
+- Flask-Migrate: This is a package for database migration; it works on top of Alembic.
+- Psycopg2-binary: This is the adapter for the Postgres database.
+- Passlib: This is a password hashing library for Python.
