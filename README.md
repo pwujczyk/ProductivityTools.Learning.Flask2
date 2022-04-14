@@ -46,3 +46,9 @@ SQL anymore.
 - Flask-Migrate: This is a package for database migration; it works on top of Alembic.
 - Psycopg2-binary: This is the adapter for the Postgres database.
 - Passlib: This is a password hashing library for Python.
+
+### Create db migrations
+
+```python 
+ flask db init
+```
