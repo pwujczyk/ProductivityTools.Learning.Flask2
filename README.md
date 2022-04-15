@@ -51,4 +51,19 @@ SQL anymore.
 
 ```python 
  flask db init
+ flask db migrate
+ flask db upgrade
+```
+
+In the Python console in the PyCharm we can invoke expressions and operate with application
+
+```commandline
+from app import *
+from models.user import User
+from models.recipe import Recipe
+app = create_app()
+user =User(username='pawel')
+with app.app_context():
+    db.session.add(user)
+    db.session.commit()
 ```
