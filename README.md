@@ -49,6 +49,10 @@ SQL anymore.
 
 ### Create db migrations
 
+- Create env
+- install dependncies 
+- Invoke commands
+
 ```python 
  flask db init
  flask db migrate

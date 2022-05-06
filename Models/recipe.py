@@ -27,8 +27,6 @@ class Recipe(db.Model):
     user_id = db.Column(db.Integer(), db.ForeignKey("user.id"))
 
     def __init__(self, id, name, description, num_of_servings):
-
-
         self.id=id
         self.name=name
         self.description=description
